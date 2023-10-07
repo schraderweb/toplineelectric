@@ -1,0 +1,235 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+// 4. Include any default map overrides here
+
+$body-color: #18191c;
+
+// Addiing custom colors or override the current ones
+$custom-theme-colors: (
+  "custom": #4862c5,
+  "client-yellow": #f7b515,
+  "dark": #18191c,
+  "light": #fcfcfc,
+  "faded": $gray-300,
+  "dark-gray": $gray-600,
+  "other-gray": #6f6f6f,
+);
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+// customer spacers, things like m-*, p-*, etc...
+$spacers: (
+  0: 0,
+  // 0px
+  1: $spacer * 0.25,
+  // 4px
+  2: $spacer * 0.5,
+  // 8px
+  3: $spacer,
+  // 16px
+  4: $spacer * 1.5,
+  // 24px
+  5: $spacer * 2,
+  // 32px
+  6: $spacer * 2.5,
+  // 40px
+  7: $spacer * 3,
+  // 48px
+  8: $spacer * 4,
+  // 64px
+  9: $spacer * 6,
+  // 69px
+);
+$spacers: map-merge($spacers, $spacers);
+
+// custom font sizing
+$font-sizes: (
+  1: $h1-font-size,
+  // 40px
+  2: $h2-font-size,
+  // 32px
+  3: $h3-font-size,
+  // 28px
+  4: $h4-font-size,
+  // 24px
+  5: $h5-font-size,
+  // 20px
+  6: $h6-font-size,
+  // 16px
+  7: $font-size-base * 0.875,
+  // 14px
+  8: $font-size-base * 0.5,
+  // 8px
+  9: $font-size-base * 0.25,
+  // 4px
+);
+$font-sizes: map-merge($font-sizes, $font-sizes);
+
+$navbar-padding-y: $spacer * 0.75;
+$navbar-nav-link-padding-x: 1.5rem;
+$navbar-light-color: #18191c;
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// 8. Add additional custom code here
+/**************************/
+/* UTILITIES */
+/**************************/
+.link-hover:hover {
+  color: #4862c5 !important;
+}
+
+/**************************/
+/* HERO SECTION */
+/**************************/
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-content {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    hsl(0, 0%, 0%) 0%,
+    hsla(0, 0%, 0%, 0.964) 7.4%,
+    hsla(0, 0%, 0%, 0.918) 15.3%,
+    hsla(0, 0%, 0%, 0.862) 23.4%,
+    hsla(0, 0%, 0%, 0.799) 31.6%,
+    hsla(0, 0%, 0%, 0.73) 39.9%,
+    hsla(0, 0%, 0%, 0.655) 48.2%,
+    hsla(0, 0%, 0%, 0.577) 56.2%,
+    hsla(0, 0%, 0%, 0.497) 64%,
+    hsla(0, 0%, 0%, 0.417) 71.3%,
+    hsla(0, 0%, 0%, 0.337) 78.1%,
+    hsla(0, 0%, 0%, 0.259) 84.2%,
+    hsla(0, 0%, 0%, 0.186) 89.6%,
+    hsla(0, 0%, 0%, 0.117) 94.1%,
+    hsla(0, 0%, 0%, 0.054) 97.6%,
+    hsla(0, 0%, 0%, 0) 100%
+  );
+}
+
+.hero-content {
+  position: absolute;
+}
+
+/**************************/
+/* INFO SECTION */
+/**************************/
+.info-topic {
+  padding-left: 1rem;
+  border-left: 3px solid #f7b515;
+}
+.info-topic-inverse {
+  padding-right: 1rem;
+  border-right: 3px solid #f7b515;
+}
+
+/**************************/
+/* OUR EXPERTISE SECTION */
+/**************************/
+.card {
+  transition: all 150ms;
+}
+
+.card-img-container {
+  overflow: hidden;
+}
+
+.card-img-top {
+  display: block;
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+/**************************/
+/* TESTIMONIAL SECTION */
+/**************************/
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+}
+.testimonial {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 0rem;
+}
+
+.testimonial-name {
+  margin-top: auto;
+  margin-left: 2rem;
+  font-size: 0.8rem;
+  color: #6f6f6f;
+}
+
+/**************************/
+/* FOOTER SECTION */
+/**************************/
+.footer-link {
+  color: $gray-600;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #4862c5;
+}
+
+.footer-link svg:hover {
+  fill: #4862c5;
+}
+
+/**************************/
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+/**************************/
+
+@media (max-width: 768px) {
+  /**************************/
+  /* HERO SECTION */
+  /**************************/
+
+  .hero-image-container {
+    height: 400px;
+  }
+  .hero-image-container img {
+    transform: scale(1.5);
+  }
+  .hero-content {
+    background: hsla(0, 0%, 0%, 0.8);
+  }
+
+  /**************************/
+  /* INFO SECTION */
+  /**************************/
+
+  .info-topic-inverse {
+    padding-left: 1rem;
+    border-right: none;
+    border-left: 3px solid #f7b515;
+  }
+}
