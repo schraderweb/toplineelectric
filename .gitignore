@@ -5,6 +5,7 @@
 /.eslintrc.json
 /.prettierignore
 /_site
+/.timetracker
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,node,dotenv

@@ -14,7 +14,7 @@ $custom-theme-colors: (
   "light": #fcfcfc,
   "faded": $gray-300,
   "dark-gray": $gray-600,
-  "other-gray": #6f6f6f,
+  "other-gray": #484848,
 );
 $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 
@@ -66,6 +66,16 @@ $font-sizes: (
 );
 $font-sizes: map-merge($font-sizes, $font-sizes);
 
+$position-values: (
+  0: 0,
+  15: 15%,
+  25: 25%,
+  35: 35%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+);
+
 $navbar-padding-y: $spacer * 0.75;
 $navbar-nav-link-padding-x: 1.5rem;
 $navbar-light-color: #18191c;
@@ -92,6 +102,9 @@ $navbar-light-color: #18191c;
   overflow: hidden;
   position: relative;
 }
+.hero-image-container img {
+  transform: scale(1.5);
+}
 
 .hero-content {
   position: absolute;
@@ -104,19 +117,19 @@ $navbar-light-color: #18191c;
   background: linear-gradient(
     to right,
     hsl(0, 0%, 0%) 0%,
-    hsla(0, 0%, 0%, 0.964) 7.4%,
-    hsla(0, 0%, 0%, 0.918) 15.3%,
-    hsla(0, 0%, 0%, 0.862) 23.4%,
-    hsla(0, 0%, 0%, 0.799) 31.6%,
-    hsla(0, 0%, 0%, 0.73) 39.9%,
-    hsla(0, 0%, 0%, 0.655) 48.2%,
-    hsla(0, 0%, 0%, 0.577) 56.2%,
-    hsla(0, 0%, 0%, 0.497) 64%,
-    hsla(0, 0%, 0%, 0.417) 71.3%,
-    hsla(0, 0%, 0%, 0.337) 78.1%,
-    hsla(0, 0%, 0%, 0.259) 84.2%,
-    hsla(0, 0%, 0%, 0.186) 89.6%,
-    hsla(0, 0%, 0%, 0.117) 94.1%,
+    hsla(0, 0%, 0%, 0.764) 7.4%,
+    hsla(0, 0%, 0%, 0.718) 15.3%,
+    hsla(0, 0%, 0%, 0.662) 23.4%,
+    hsla(0, 0%, 0%, 0.599) 31.6%,
+    hsla(0, 0%, 0%, 0.53) 39.9%,
+    hsla(0, 0%, 0%, 0.355) 48.2%,
+    hsla(0, 0%, 0%, 0.277) 56.2%,
+    hsla(0, 0%, 0%, 0.297) 64%,
+    hsla(0, 0%, 0%, 0.217) 71.3%,
+    hsla(0, 0%, 0%, 0.137) 78.1%,
+    hsla(0, 0%, 0%, 0.059) 84.2%,
+    hsla(0, 0%, 0%, 0.086) 89.6%,
+    hsla(0, 0%, 0%, 0.017) 94.1%,
     hsla(0, 0%, 0%, 0.054) 97.6%,
     hsla(0, 0%, 0%, 0) 100%
   );
@@ -183,7 +196,7 @@ $navbar-light-color: #18191c;
   margin-top: auto;
   margin-left: 2rem;
   font-size: 0.8rem;
-  color: #6f6f6f;
+  color: #484848;
 }
 
 /**************************/
@@ -202,34 +215,101 @@ $navbar-light-color: #18191c;
   fill: #4862c5;
 }
 
+.review-logo {
+  width: 48px;
+  transition: all ease 150ms;
+
+  &.google {
+    width: 64px;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+/**************************/
+/* COPYRIGHT SECTION */
+/**************************/
+.copyright-link {
+  color: #484848;
+  text-decoration: none;
+  &:hover {
+    color: #4862c5;
+  }
+}
+
+/**************************/
+/**************************/
+/* BELOW 711px (Smaller desktops) */
+/**************************/
+/**************************/
+@media (max-width: 870px) {
+  /**************************/
+  /* HERO SECTION */
+  /**************************/
+  .hero-image-container img {
+    transform: scale(2);
+  }
+}
+
 /**************************/
 /**************************/
 /* BELOW 1344px (Smaller desktops) */
 /**************************/
 /**************************/
-
 @media (max-width: 768px) {
   /**************************/
   /* HERO SECTION */
   /**************************/
-
   .hero-image-container {
-    height: 400px;
+    height: 800px;
   }
   .hero-image-container img {
-    transform: scale(1.5);
+    transform: scale(2);
   }
   .hero-content {
-    background: hsla(0, 0%, 0%, 0.8);
+    // background: hsla(0, 0%, 0%, 0.5);
+    background: linear-gradient(
+      hsl(0, 0%, 0%) 0%,
+      hsla(0, 0%, 0%, 0.764) 7.4%,
+      hsla(0, 0%, 0%, 0.718) 15.3%,
+      hsla(0, 0%, 0%, 0.662) 23.4%,
+      hsla(0, 0%, 0%, 0.599) 31.6%,
+      hsla(0, 0%, 0%, 0.53) 39.9%,
+      hsla(0, 0%, 0%, 0.355) 48.2%,
+      hsla(0, 0%, 0%, 0.277) 56.2%,
+      hsla(0, 0%, 0%, 0.297) 64%,
+      hsla(0, 0%, 0%, 0.217) 71.3%,
+      hsla(0, 0%, 0%, 0.137) 78.1%,
+      hsla(0, 0%, 0%, 0.059) 84.2%,
+      hsla(0, 0%, 0%, 0.086) 89.6%,
+      hsla(0, 0%, 0%, 0.017) 94.1%,
+      hsla(0, 0%, 0%, 0.054) 97.6%,
+      hsla(0, 0%, 0%, 0) 100%
+    );
   }
 
   /**************************/
   /* INFO SECTION */
   /**************************/
-
   .info-topic-inverse {
     padding-left: 1rem;
     border-right: none;
     border-left: 3px solid #f7b515;
+  }
+}
+
+/**************************/
+/**************************/
+/* BELOW 711px (Smaller desktops) */
+/**************************/
+/**************************/
+@media (max-width: 711px) {
+  /**************************/
+  /* HERO SECTION */
+  /**************************/
+  .hero-image-container img {
+    transform: scale(3);
   }
 }
