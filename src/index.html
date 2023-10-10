@@ -93,8 +93,8 @@ needs." %} {% block content %}
                   class="form-select"
                   name="state"
                 >
-                  <option selected="">State</option>
-                  <option>...</option>
+                  <option value="" disbaled selected="">State</option>
+                  {% include "_states.html" %}
                 </select>
               </div>
               <div class="col-md-2">
