@@ -5,16 +5,21 @@
 // 4. Include any default map overrides here
 
 $body-color: #18191c;
+$client-gray: #4b4b4b;
+$client-yellow: #f7b515;
+$client-yellow-accent: #fef8e8;
+$client-purplish-blue: #4862c5;
 
 // Addiing custom colors or override the current ones
 $custom-theme-colors: (
-  "custom": #4862c5,
-  "client-yellow": #f7b515,
+  "custom": $client-purplish-blue,
+  "client-yellow": $client-yellow,
+  "client-yellow-accent": $client-yellow-accent,
+  "client-gray": $client-gray,
   "dark": #18191c,
-  "light": #fcfcfc,
+  "light": #fafafa,
   "faded": $gray-300,
   "dark-gray": $gray-600,
-  "other-gray": #484848,
 );
 $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 
@@ -68,6 +73,12 @@ $font-sizes: map-merge($font-sizes, $font-sizes);
 
 $position-values: (
   0: 0,
+  1: 1%,
+  2: 2%,
+  3: 3%,
+  4: 4%,
+  5: 5%,
+  10: 10%,
   15: 15%,
   25: 25%,
   35: 35%,
@@ -87,7 +98,7 @@ $navbar-light-color: #18191c;
 /* UTILITIES */
 /**************************/
 .link-hover:hover {
-  color: #4862c5 !important;
+  color: $client-purplish-blue !important;
 }
 
 /**************************/
@@ -114,29 +125,33 @@ $navbar-light-color: #18191c;
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(
-    to right,
-    hsl(0, 0%, 0%) 0%,
-    hsla(0, 0%, 0%, 0.764) 7.4%,
-    hsla(0, 0%, 0%, 0.718) 15.3%,
-    hsla(0, 0%, 0%, 0.662) 23.4%,
-    hsla(0, 0%, 0%, 0.599) 31.6%,
-    hsla(0, 0%, 0%, 0.53) 39.9%,
-    hsla(0, 0%, 0%, 0.355) 48.2%,
-    hsla(0, 0%, 0%, 0.277) 56.2%,
-    hsla(0, 0%, 0%, 0.297) 64%,
-    hsla(0, 0%, 0%, 0.217) 71.3%,
-    hsla(0, 0%, 0%, 0.137) 78.1%,
-    hsla(0, 0%, 0%, 0.059) 84.2%,
-    hsla(0, 0%, 0%, 0.086) 89.6%,
-    hsla(0, 0%, 0%, 0.017) 94.1%,
-    hsla(0, 0%, 0%, 0.054) 97.6%,
-    hsla(0, 0%, 0%, 0) 100%
-  );
+  background: hsla(0, 0%, 0%, 0.2) 0%;
+  // background: linear-gradient(
+  //   to right,
+  //   hsl(0, 0%, 0%) 0%,
+  //   hsla(0, 0%, 0%, 0.764) 7.4%,
+  //   hsla(0, 0%, 0%, 0.718) 15.3%,
+  //   hsla(0, 0%, 0%, 0.662) 23.4%,
+  //   hsla(0, 0%, 0%, 0.599) 31.6%,
+  //   hsla(0, 0%, 0%, 0.53) 39.9%,
+  //   hsla(0, 0%, 0%, 0.355) 48.2%,
+  //   hsla(0, 0%, 0%, 0.277) 56.2%,
+  //   hsla(0, 0%, 0%, 0.297) 64%,
+  //   hsla(0, 0%, 0%, 0.217) 71.3%,
+  //   hsla(0, 0%, 0%, 0.137) 78.1%,
+  //   hsla(0, 0%, 0%, 0.059) 84.2%,
+  //   hsla(0, 0%, 0%, 0.086) 89.6%,
+  //   hsla(0, 0%, 0%, 0.017) 94.1%,
+  //   hsla(0, 0%, 0%, 0.054) 97.6%,
+  //   hsla(0, 0%, 0%, 0) 100%
+  // );
 }
 
-.hero-content {
-  position: absolute;
+.hero-header {
+  text-shadow: 1px 2px 5px #18191c;
+}
+.hero-text {
+  text-shadow: 1px 1px 3px #18191c;
 }
 
 /**************************/
@@ -144,11 +159,11 @@ $navbar-light-color: #18191c;
 /**************************/
 .info-topic {
   padding-left: 1rem;
-  border-left: 3px solid #f7b515;
+  border-left: 3px solid $client-yellow;
 }
 .info-topic-inverse {
   padding-right: 1rem;
-  border-right: 3px solid #f7b515;
+  border-right: 3px solid $client-yellow;
 }
 
 /**************************/
@@ -203,7 +218,7 @@ $navbar-light-color: #18191c;
 /* FOOTER SECTION */
 /**************************/
 .footer-link {
-  color: $gray-600;
+  color: $client-gray;
   text-decoration: none;
 }
 
@@ -215,16 +230,15 @@ $navbar-light-color: #18191c;
   fill: #4862c5;
 }
 
+/**************************/
+/* LEAVE REVIEW SECTION */
+/**************************/
 .review-logo {
-  width: 48px;
+  width: 11rem;
   transition: all ease 150ms;
 
-  &.google {
-    width: 64px;
-  }
-
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 }
 
@@ -232,10 +246,10 @@ $navbar-light-color: #18191c;
 /* COPYRIGHT SECTION */
 /**************************/
 .copyright-link {
-  color: #484848;
+  color: #fafafa;
   text-decoration: none;
   &:hover {
-    color: #4862c5;
+    color: $client-purplish-blue;
   }
 }
 
@@ -269,25 +283,24 @@ $navbar-light-color: #18191c;
     transform: scale(2);
   }
   .hero-content {
-    // background: hsla(0, 0%, 0%, 0.5);
-    background: linear-gradient(
-      hsl(0, 0%, 0%) 0%,
-      hsla(0, 0%, 0%, 0.764) 7.4%,
-      hsla(0, 0%, 0%, 0.718) 15.3%,
-      hsla(0, 0%, 0%, 0.662) 23.4%,
-      hsla(0, 0%, 0%, 0.599) 31.6%,
-      hsla(0, 0%, 0%, 0.53) 39.9%,
-      hsla(0, 0%, 0%, 0.355) 48.2%,
-      hsla(0, 0%, 0%, 0.277) 56.2%,
-      hsla(0, 0%, 0%, 0.297) 64%,
-      hsla(0, 0%, 0%, 0.217) 71.3%,
-      hsla(0, 0%, 0%, 0.137) 78.1%,
-      hsla(0, 0%, 0%, 0.059) 84.2%,
-      hsla(0, 0%, 0%, 0.086) 89.6%,
-      hsla(0, 0%, 0%, 0.017) 94.1%,
-      hsla(0, 0%, 0%, 0.054) 97.6%,
-      hsla(0, 0%, 0%, 0) 100%
-    );
+    // background: linear-gradient(
+    //   hsl(0, 0%, 0%) 0%,
+    //   hsla(0, 0%, 0%, 0.764) 7.4%,
+    //   hsla(0, 0%, 0%, 0.718) 15.3%,
+    //   hsla(0, 0%, 0%, 0.662) 23.4%,
+    //   hsla(0, 0%, 0%, 0.599) 31.6%,
+    //   hsla(0, 0%, 0%, 0.53) 39.9%,
+    //   hsla(0, 0%, 0%, 0.355) 48.2%,
+    //   hsla(0, 0%, 0%, 0.277) 56.2%,
+    //   hsla(0, 0%, 0%, 0.297) 64%,
+    //   hsla(0, 0%, 0%, 0.217) 71.3%,
+    //   hsla(0, 0%, 0%, 0.137) 78.1%,
+    //   hsla(0, 0%, 0%, 0.059) 84.2%,
+    //   hsla(0, 0%, 0%, 0.086) 89.6%,
+    //   hsla(0, 0%, 0%, 0.017) 94.1%,
+    //   hsla(0, 0%, 0%, 0.054) 97.6%,
+    //   hsla(0, 0%, 0%, 0) 100%
+    // );
   }
 
   /**************************/
@@ -296,7 +309,7 @@ $navbar-light-color: #18191c;
   .info-topic-inverse {
     padding-left: 1rem;
     border-right: none;
-    border-left: 3px solid #f7b515;
+    border-left: 3px solid $client-yellow;
   }
 }
 
@@ -310,6 +323,13 @@ $navbar-light-color: #18191c;
   /* HERO SECTION */
   /**************************/
   .hero-image-container img {
-    transform: scale(3);
+    transform: scale(3.1);
+  }
+
+  /**************************/
+  /* LEAVE REVIEW SECTION */
+  /**************************/
+  .review-logo {
+    width: 10rem;
   }
 }

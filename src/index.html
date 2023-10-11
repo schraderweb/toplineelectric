@@ -14,10 +14,10 @@ needs." %} {% block content %}
       <div class="container">
         <div class="row align-items-center">
           <div class="col-xl-6 col-md-6 col-sm-12 px-4 px-md-3 mb-6 mb-md-0">
-            <h1 class="text-light fw-bold">
+            <h1 class="hero-header text-light fw-bold">
               Top Line Electric, Your Electrical Connection!
             </h1>
-            <p class="text-faded lh-sm">
+            <p class="hero-text text-light lh-sm">
               Whether you’re a small business, large business or a home owner,
               we can offer you a professional electrical service experience
               suited to your individual needs.
@@ -132,7 +132,7 @@ needs." %} {% block content %}
   </div>
 </section>
 
-<section class="section-info pt-7">
+<section class="section-info pt-8">
   <div class="container">
     <h2 class="mb-5 fw-bold text-center">We're here for you</h2>
   </div>
@@ -199,7 +199,7 @@ needs." %} {% block content %}
   </div>
 </section>
 
-<section class="section-expertise py-7">
+<section class="section-expertise py-8">
   <div class="container">
     <h2 class="mb-5 fw-bold text-center">Our Expertise</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -351,7 +351,7 @@ needs." %} {% block content %}
   </div>
 </section>
 
-<section class="section-testimonials py-7 bg-client-yellow">
+<section class="section-testimonials py-8 bg-client-yellow">
   <div class="container">
     <div class="text-center">
       <svg
@@ -419,7 +419,7 @@ needs." %} {% block content %}
     <a
       href="https://maps.app.goo.gl/duRybhq3tu63uHeN9"
       target="_blank"
-      class="d-block text-center mb-5 fs-7 text-other-gray link-hover"
+      class="d-block text-center mb-5 fs-7 text-client-gray link-hover"
       >Click to leave a review</a
     >
 
@@ -471,7 +471,7 @@ needs." %} {% block content %}
     </div>
     <!-- <hr />
     <div class="text-center">
-      <h3 class="fs-6 fw-bold text-other-gray mt-6 mb-3">
+      <h3 class="fs-6 fw-bold text-client-gray mt-6 mb-3">
         Leave us a review on
         <span
           ><a
@@ -504,41 +504,53 @@ needs." %} {% block content %}
   </div>
 </section>
 
-<section class="section-leaver-review py-7">
+<section class="section-leaver-review py-8">
   <div class="text-center">
     <h3 class="fw-bold text-center mb-4">
       Leave us a review on
       <span
         ><a
+          target="_blank"
           href="https://www.google.com/maps/place/Top+Line+Electric/@44.662868,-85.6777714,17z/data=!3m1!4b1!4m6!3m5!1s0x881e32a19eb87c7f:0xd65aaee8caee91e7!8m2!3d44.662868!4d-85.6777714!16s%2Fg%2F1tl_mb4q?entry=ttu"
           >Google</a
         ></span
       >
-      or
+      |
       <span
-        ><a href="https://www.facebook.com/toplineelectricllc/"
+        ><a target="_blank" href="https://www.facebook.com/toplineelectricllc/"
           >Facebook</a
         ></span
       >
     </h3>
-    <a
-      class="me-5"
-      href="https://www.google.com/maps/place/Top+Line+Electric/@44.662868,-85.6777714,17z/data=!3m1!4b1!4m6!3m5!1s0x881e32a19eb87c7f:0xd65aaee8caee91e7!8m2!3d44.662868!4d-85.6777714!16s%2Fg%2F1tl_mb4q?entry=ttu"
-      ><img
-        class="review-logo google"
-        src="/public/images/google_g_icon_download.png"
-        alt="google G logo"
-    /></a>
-    <a href="https://www.facebook.com/toplineelectricllc/"
-      ><img
-        class="review-logo"
-        src="/public/images/Facebook_Logo_Primary.png"
-        alt="google G logo"
-    /></a>
+    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+      <a
+        target="_blank"
+        href="https://www.google.com/maps/place/Top+Line+Electric/@44.662868,-85.6777714,17z/data=!3m1!4b1!4m6!3m5!1s0x881e32a19eb87c7f:0xd65aaee8caee91e7!8m2!3d44.662868!4d-85.6777714!16s%2Fg%2F1tl_mb4q?entry=ttu"
+        ><img
+          class="review-logo google"
+          src="/public/images/google-review.png"
+          alt="google G logo"
+      /></a>
+      <a target="_blank" href="https://www.facebook.com/toplineelectricllc/"
+        ><img
+          class="review-logo"
+          src="/public/images/fb-review.png"
+          alt="google G logo"
+      /></a>
+    </div>
   </div>
 </section>
 
-<section class="section-map">
+<section class="service-area-section bg-client-yellow py-8">
+  <div class="container">
+    <h3 class="fw-bold text-center mb-4">
+      Proudly serving all the areas listed below
+    </h3>
+    <div class="text-center">{% include "_serviceAreas.html" %}</div>
+  </div>
+</section>
+
+<section class="section-map bg-client-yellow-accent">
   <div>
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d45404.4630057074!2d-85.677771!3d44.662868!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x881e32a19eb87c7f%3A0xd65aaee8caee91e7!2sTop%20Line%20Electric!5e0!3m2!1sen!2sus!4v1696352002029!5m2!1sen!2sus"
