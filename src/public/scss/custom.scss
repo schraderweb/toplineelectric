@@ -5,8 +5,9 @@
 // 4. Include any default map overrides here
 
 $body-color: #18191c;
-$client-gray: #4b4b4b;
+$client-gray: #3f3f3f;
 $client-yellow: #f7b515;
+$client-yellow-accent2: #e9b128;
 $client-yellow-accent: #fde9b9;
 $client-purplish-blue: #4862c5;
 
@@ -15,6 +16,7 @@ $custom-theme-colors: (
   "custom": $client-purplish-blue,
   "client-yellow": $client-yellow,
   "client-yellow-accent": $client-yellow-accent,
+  "client-yellow-accent2": $client-yellow-accent2,
   "client-gray": $client-gray,
   "dark": #18191c,
   "light": #fafafa,
