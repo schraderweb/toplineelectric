@@ -7,7 +7,7 @@
 $body-color: #18191c;
 $client-gray: #4b4b4b;
 $client-yellow: #f7b515;
-$client-yellow-accent: #fef8e8;
+$client-yellow-accent: #fde9b9;
 $client-purplish-blue: #4862c5;
 
 // Addiing custom colors or override the current ones
@@ -125,7 +125,7 @@ $navbar-light-color: #18191c;
   right: 0;
   bottom: 0;
   left: 0;
-  background: hsla(0, 0%, 0%, 0.2) 0%;
+  background: hsla(0, 0%, 0%, 0.3) 0%;
   // background: linear-gradient(
   //   to right,
   //   hsl(0, 0%, 0%) 0%,
@@ -151,7 +151,7 @@ $navbar-light-color: #18191c;
   text-shadow: 1px 2px 5px #18191c;
 }
 .hero-text {
-  text-shadow: 1px 1px 3px #18191c;
+  text-shadow: 1px 1px 10px #18191c;
 }
 
 /**************************/
@@ -191,6 +191,12 @@ $navbar-light-color: #18191c;
 /**************************/
 /* TESTIMONIAL SECTION */
 /**************************/
+.section-testimonials {
+  background-image: url("../images/bg_testimonials_web.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .testimonials {
   display: grid;
   grid-template-columns: 1fr 1fr;
