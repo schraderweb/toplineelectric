@@ -1,0 +1,173 @@
+{% extends 'layouts/base.html' %}
+<!--  -->
+{% set title = "Top Line Electric, LLC - Traverse City, Michigan Electrical
+Services - Contact " %}
+<!--  -->
+{% set description = "Contact Top Line Electrical In Traverse City, Michigan For
+All Of Your Electrical Needs" %}
+<!--  -->
+{% set imgSrc = "/public/images/topline-hero.jpg" %}
+<!--  -->
+{% set imgAlt = "topline electric van" %}
+<!--  -->
+{% set pageTitle = "Contact us" %}
+
+<!-- ---------------------------------- -->
+{% block content %}
+<!--  -->
+{% include "_page-header.html" %}
+<section class="section-page pt-3">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p class="fw-bold">
+          We staff our Top Line electricians with solutions-minded skilled
+          professionals set on providing same-day response, expert installation,
+          immaculate clean-up and genuine courtesy. If you would like one of our
+          professionals to contact you please complete the form below. Please
+          specifically describe your inquiry:
+        </p>
+      </div>
+    </div>
+    <div class="row col-gap-4">
+      <div class="col-12 col-md-6">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d45404.4630057074!2d-85.677771!3d44.662868!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x881e32a19eb87c7f%3A0xd65aaee8caee91e7!2sTop%20Line%20Electric!5e0!3m2!1sen!2sus!4v1696352002029!5m2!1sen!2sus"
+          width="100%"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <p class="fw-bold mb-5">
+          Want to work with us? Please send your resume to
+          info@toplineelectric.us
+        </p>
+        <p class="fw-bold">
+          For All Your Electrical Needs in Northern Michigan. Top Line Electric
+          LLC
+        </p>
+      </div>
+      <div class="col-12 col-md-6">
+        <form action="" method="" class="row g-2">
+          <!-- <h2 class="text-white fw-bold fs-2">Let's get in touch</h2> -->
+          <div class="col-md-6">
+            <input
+              required
+              type="text"
+              class="form-control"
+              name="firstName"
+              id="inputFirstName"
+              placeholder="First name"
+              autocomplete="given-name"
+            />
+          </div>
+          <div class="col-md-6">
+            <input
+              required
+              type="text"
+              class="form-control"
+              name="lastName"
+              id="inputLastName"
+              placeholder="Last name"
+              autocomplete="family-name"
+            />
+          </div>
+          <div class="col-md-12">
+            <input
+              required
+              type="email"
+              class="form-control"
+              name="email"
+              id="inputEmail"
+              placeholder="Email"
+              autocomplete="email"
+            />
+          </div>
+          <div class="col-md-12">
+            <input
+              required
+              type="text"
+              class="form-control"
+              name="phone"
+              id="inputPhone"
+              placeholder="Phone Number"
+              autocomplete="tel"
+            />
+          </div>
+          <!-- <div class="col-12">
+            <input
+              required
+              type="text"
+              class="form-control"
+              name="address"
+              id="inputAddress"
+              placeholder="Street"
+              autocomplete="street-address"
+            />
+          </div>
+          <div class="col-md-12">
+            <input
+              required
+              type="text"
+              class="form-control"
+              name="city"
+              id="inputCity"
+              placeholder="City"
+            />
+          </div> -->
+          <!-- <div class="col-md-4">
+            <select
+              required
+              id="inputState"
+              class="form-select"
+              name="state"
+            >
+              <option value="" disbaled selected="">State</option>
+              {% include "_states.html" %}
+            </select>
+          </div>
+          <div class="col-md-2">
+            <input
+              required
+              type="text"
+              class="form-control"
+              name="zip"
+              id="inputZip"
+              placeholder="Zip"
+              autocomplete="postal-code"
+            />
+          </div> -->
+          <div class="col-md-12">
+            <textarea
+              required
+              type="text"
+              class="form-control"
+              name="description"
+              id="inputDescription"
+              placeholder="Describe what we can help you with..."
+            ></textarea>
+          </div>
+
+          <div class="d-grid col-12">
+            <button type="submit" class="btn btn-client-yellow fw-bold">
+              Let's get in touch
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% include "sections/_services.html" %}
+<!--  -->
+{% include "sections/_testimonials.html" %}
+<!--  -->
+{% include "sections/_please-review.html" %}
+<!--  -->
+{% include "sections/_service-area.html" %}
+<!--  -->
+{% include "sections/_map.html" %}
+<!--  -->
+{% endblock %}
