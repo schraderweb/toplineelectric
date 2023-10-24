@@ -1,12 +1,8 @@
 {% extends 'layouts/base.html' %}
 <!--  -->
-{% set title = "Top Line Electric, LLC - Traverse City, Michigan Electrical
-Services - Electrical Services " %}
+{% set title = "Top Line Electric, LLC - About Us - Traverse City, Michigan " %}
 <!--  -->
-{% set description = "Top Line Electric, located in Traverse City, MI, performs
-electrical construction and repair including remodeling and retrofit electrical
-service for residential clients and commercial clients plus property management
-companies." %}
+{% set description = "Top Line Electric - Learn About Our Team And Company located in Traverse City, MI" %}
 <!--  -->
 {% set imgSrc = "/public/images/topline-hero.jpg" %}
 <!--  -->
