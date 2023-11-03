@@ -1,1 +1,72 @@
+{% extends 'layouts/base.html' %}
+<!--  -->
+{% set title = "Top Line Electric, LLC - Traverse City, Michigan Electrical Services - New Construction Electricians" %}
+<!--  -->
+{% set description = "Top Line Electric, located in Traverse City, MI, performs
+electrical construction and repair including remodeling and retrofit electrical
+service for residential clients and commercial clients plus property management
+companies." %}
+<!--  -->
+{% set imgSrc = "/public/images/topline-hero.jpg" %}
+<!--  -->
+{% set imgAlt = "topline electric van" %}
+<!--  -->
+{% set pageTitle = "New Construction Electricians" %}
+<!--  -->
 
+{% block content %}
+<!-- ---------------------------------- -->
+{% include "_page-header.html" %}
+<section class="section-page pt-3">
+  <div class="container">
+    <div class="row col-gap-4">
+      <div class="col-3 d-none d-md-block">
+        {% include "_services_nav.html" %}
+      </div>
+      <div class="col">
+        <h2 class="fw-bold">
+New Construction Electricians </h2>
+
+
+
+
+<p>Northern Michigan’s premier General Contractors have depended on Top Line Electric’s construction electricians since 2006. Regarded as the go-to full-service electrical contractor capable of handling projects from small to more than $1 million, Top Line Electric’s Contract/Construction division specializes in electrical services for new construction, tenant build-out and remodels/retrofits. Locally owned and operated by Principal Blaine Vadeboncoeur who has 25-plus years experience serving the Traverse City-Northern Michigan area, the company has completed a wide array of projects for top contractors from around the country.</p>
+<h2 id="commercial-construction-and-design">Commercial Construction and Design</h2>
+<ul>
+<li>Academic Institutions</li>
+<li>Retail – New &amp; Remodels</li>
+<li>Financial Institutions</li>
+<li>Hotels/Lodging</li>
+<li>Office Space (Core &amp; Shell as well as Tenant Build-Out)</li>
+<li>Strip Centers</li>
+<li>Site work</li>
+</ul>
+<ul>
+<li>Distribution &amp; Multi-Use Warehouses</li>
+<li>Parks &amp; Recreation Facilities</li>
+<li>Multi-Family Dwellings</li>
+<li>Custom/Spec Homes</li>
+<li>Lighting Retrofits</li>
+</ul>
+
+
+
+
+        
+        
+  
+      </div>
+    </div>
+  </div>
+</section>
+{% include "sections/_services.html" %}
+<!--  -->
+{% include "sections/_testimonials.html" %}
+<!--  -->
+{% include "sections/_please-review.html" %}
+<!--  -->
+{% include "sections/_service-area.html" %}
+<!--  -->
+{% include "sections/_map.html" %}
+<!--  -->
+{% endblock %}
