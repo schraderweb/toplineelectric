@@ -1,1 +1,81 @@
+{% extends 'layouts/base.html' %}
+<!--  -->
+{% set title = "Top Line Electric, LLC - Traverse City, Michigan Electrical Services - Industrial Electricians" %}
+<!--  -->
+{% set description = "Top Line Electric, located in Traverse City, MI, performs
+electrical construction and repair including remodeling and retrofit electrical
+service for residential clients and commercial clients plus property management
+companies." %}
+<!--  -->
+{% set imgSrc = "/public/images/topline-hero.jpg" %}
+<!--  -->
+{% set imgAlt = "topline electric van" %}
+<!--  -->
+{% set pageTitle = "Industrial Electricians" %}
+<!--  -->
 
+{% block content %}
+<!-- ---------------------------------- -->
+{% include "_page-header.html" %}
+<section class="section-page pt-3">
+  <div class="container">
+    <div class="row col-gap-4">
+      <div class="col-3 d-none d-md-block">
+        {% include "_services_nav.html" %}
+      </div>
+      <div class="col">
+        <h2 class="fw-bold">
+  Industrial Electricians    </h2>
+
+
+
+<p>Industrial buildings today have more electrical requirements than ever before in construction history. As experienced industrial electricians, many Traverse City-Northern Michigan business rely on our expertise for timely and professional electrical services. See our Commercial Electrical Services for a complete listing of our services from construction to maintenance.</p>
+<h2 id="our-industrial-electrical-services-include">Our industrial electrical services include:</h2>
+<div class="row">
+<section class="six columns">
+<ul>
+<li>New construction</li>
+<li>Remodel &amp; retrofits</li>
+<li>Troubleshooting</li>
+<li>Data cabling</li>
+<li>Design Build Service</li>
+<li>Equipment Power</li>
+<li>Security Lighting</li>
+<li>Fire Alarm Systems</li>
+<li>Transformers</li>
+<li>Heat Trace</li>
+<li>Door Access System</li>
+<li>Machinery Relocations</li>
+<li>Exit signs &amp; egress lights</li>
+</ul>
+</section>
+<section class="six columns">
+<ul>
+<li>Equipment moves, additions &amp; changes</li>
+<li>Individual Machine Feeds &amp; Connections</li>
+<li>Infrared panel scanning and Arc Flash Surveys</li>
+<li>Harmonic remediation &amp; surge protection</li>
+<li>Larger Feeders &amp; Switchboard</li>
+<li>Power Distribution System</li>
+<li>Motor Controls &amp; Applications</li>
+<li>Robotic Controllers &amp; Conveyor Systems</li>
+</ul>
+</section>
+
+        
+  
+      </div>
+    </div>
+  </div>
+</section>
+{% include "sections/_services.html" %}
+<!--  -->
+{% include "sections/_testimonials.html" %}
+<!--  -->
+{% include "sections/_please-review.html" %}
+<!--  -->
+{% include "sections/_service-area.html" %}
+<!--  -->
+{% include "sections/_map.html" %}
+<!--  -->
+{% endblock %}
