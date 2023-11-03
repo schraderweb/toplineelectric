@@ -1,0 +1,62 @@
+{% extends 'layouts/base.html' %}
+<!--  -->
+{% set title = "Top Line Electric, LLC - Traverse City, Michigan Electrical Services - Facility Maintenance" %}
+<!--  -->
+{% set description = "Top Line Electric, located in Traverse City, MI, performs
+electrical construction and repair including remodeling and retrofit electrical
+service for residential clients and commercial clients plus property management
+companies." %}
+<!--  -->
+{% set imgSrc = "/public/images/topline-hero.jpg" %}
+<!--  -->
+{% set imgAlt = "topline electric van" %}
+<!--  -->
+{% set pageTitle = "Facility Maintenance" %}
+<!--  -->
+
+{% block content %}
+<!-- ---------------------------------- -->
+{% include "_page-header.html" %}
+<section class="section-page pt-3">
+  <div class="container">
+    <div class="row col-gap-4">
+      <div class="col-3 d-none d-md-block">
+        {% include "_services_nav.html" %}
+      </div>
+      <div class="col">
+        <h2 class="fw-bold">
+  Your Electricians for Facility Maintenance     </h2>
+
+
+
+<p>As a leading <a href="https://toplineelectric.us/" title="Home">electrical service contractor in Northern Michigan</a>, Top Line Electric is able to offer 24 hour a day, 7 days a week for our facility maintenance and manager partners. With a designated project manager handling your own account, you can count on the dependability and reliability that requests and work will be done as required.</p>
+<p>Top Line can provide your facility maintenance/management company with a broad range of services from general troubleshooting to full-scale remodels and renovations including but not limited to the following:</p>
+<ul>
+<li>Power check and repair issues</li>
+<li>Re-lamping</li>
+<li>Tenant finish</li>
+<li>Ballast and/or fixture replacement</li>
+<li>Interior/exterior lighting surveys</li>
+<li>Building perimeter and site lighting repairs</li>
+<li>Switchgear and Power Distribution</li>
+<li>Generator installation</li>
+<li>Underground fault location and repair</li>
+</ul>
+
+        
+  
+      </div>
+    </div>
+  </div>
+</section>
+{% include "sections/_services.html" %}
+<!--  -->
+{% include "sections/_testimonials.html" %}
+<!--  -->
+{% include "sections/_please-review.html" %}
+<!--  -->
+{% include "sections/_service-area.html" %}
+<!--  -->
+{% include "sections/_map.html" %}
+<!--  -->
+{% endblock %}
