@@ -234,38 +234,5 @@ needs." %} {% block content %}
 <!--  -->
 {% endblock %}
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script type="text/javascript">
-    (function () {
-        // https://dashboard.emailjs.com/admin/account
-        emailjs.init('3PL-8GTdovHiiMMcC');
-    })();
-</script>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-<script>
-  $('#contact-form').on('submit', function (event) {
-        event.preventDefault(); // prevent reload
-
-        var formData = new FormData(this);
-        formData.append('service_id', 'service_38bpoko');
-        formData.append('template_id', 'template_31vn69z');
-        formData.append('user_id', '3PL-8GTdovHiiMMcC');
-
-        $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
-            type: 'POST',
-            data: formData,
-            contentType: false, // auto-detection
-            processData: false // no need to parse formData to string
-        }).done(function () {
-            console.log(formData);
-            
-            alert('Your mail is sent!');
-        }).fail(function (error) {
-            alert('Oops... ' + JSON.stringify(error));
-        });
-    });
-
-</script>
 
